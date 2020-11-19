@@ -1,5 +1,5 @@
-import { colorsReducer } from './colorsReducer';
-import { reducerDemo } from './reducerDemo';
+import { colorsReducer } from "./colorsReducer";
+import { reducerDemo } from "./reducerDemo";
 
 const Reducer = Object.assign(colorsReducer, reducerDemo);
 
