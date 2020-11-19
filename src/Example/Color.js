@@ -7,6 +7,7 @@ export const UPDATE_COLOR = "UPDATE_COLOR";
 
 export const Color = (props) => {
   const [color, dispatch] = useReducer(Reducer.colorsReducer, "blue");
+
   return (
     <ColorContext.Provider value={{ color, dispatch }}>
       {props.children}
