@@ -4,7 +4,7 @@ import { Row, Col, Input } from "antd";
 import { FormDemoContext } from "./FormDemo";
 
 export default function FormListInputpass() {
-  const { password, dispatch2 } = useContext(FormDemoContext);
+  const { state, dispatch } = useContext(FormDemoContext);
 
   return (
     <div>
@@ -13,10 +13,10 @@ export default function FormListInputpass() {
         <Col>
           <Input
             type="password"
-            value={password}
+            value={state.password}
             placeholder="请输入"
             onChange={(e) =>
-              dispatch2({ type: "changeValue", newValue: e.target.value })
+              dispatch({ type: "changePassword", password: e.target.value })
             }
           />
         </Col>

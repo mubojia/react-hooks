@@ -1,8 +1,12 @@
 export const fromDemoReducer = {
   fromDemoInputReducer: (state, action) => {
     switch (action.type) {
-      case "changeValue":
-        return action.newValue;
+      case "changeAccount":
+        state.account = action.account;
+        return state;
+      case "changePassword":
+        state.password = action.password;
+        return state;
       default:
         return state;
     }

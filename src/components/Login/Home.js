@@ -53,6 +53,7 @@ export const Home = () => {
           <span className="error">AN ERROR HAS OCCURED</span>
         ) : (
           <>
+            1111
             {state.songs.length > 0 &&
               state.songs.map((song) => (
                 <Card key={song.id.toString()} song={song} />

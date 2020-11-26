@@ -4,7 +4,7 @@ import { Row, Col, Input } from "antd";
 import { FormDemoContext } from "./FormDemo";
 
 export default function FormListInputAcc() {
-  const { account, dispatch1 } = useContext(FormDemoContext);
+  const { state, dispatch } = useContext(FormDemoContext);
 
   return (
     <div>
@@ -13,11 +13,11 @@ export default function FormListInputAcc() {
         <Col>
           <Input
             type="text"
-            value={account}
+            value={state.account}
             placeholder="请输入"
-            onChange={(e) =>
-              dispatch1({ type: "changeValue", newValue: e.target.value })
-            }
+            onChange={(e) => {
+              dispatch({ type: "changeAccount", account: e.target.value });
+            }}
           />
         </Col>
       </Row>

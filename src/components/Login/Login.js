@@ -60,26 +60,19 @@ export const Login = () => {
             <h1>Login</h1>
             <label htmlFor="email">
               Email Address
-              <input
-                type="text"
-                value={data.email}
-                onChange={handleInputChage}
-                name="email"
-                id="email"
-              />
+              <input type="text" value={data.email} name="email" id="email" />
             </label>
             <label htmlFor="password">
               Password
               <input
                 type="password"
                 value={data.password}
-                onChange={handleInputChage}
                 name="password"
                 id="password"
               />
             </label>
 
-            <button disabled={data.isSubmitting}>
+            <button disabled={data.isSubmitting} onClick={handleInputChage}>
               {data.isSubmitting ? "Loading..." : "Login"}
             </button>
           </form>

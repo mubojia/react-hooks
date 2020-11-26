@@ -14,7 +14,6 @@ const initialState = {
 
 export const LoginComponent = () => {
   const [state, dispatch] = useReducer(Reducer.loginReducer, initialState);
-
   return (
     <AuthContext.Provider value={{ state, dispatch }}>
       <Header />
